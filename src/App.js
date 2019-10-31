@@ -3,7 +3,7 @@ import Comp from "./components/samples/comp";
 import PureComp from "./components/samples/pureComp";
 import FuncComp from "./components/samples/funcComp";
 
-import "./App.css";
+import "./App.scss";
 
 const createdReactElement = React.createElement('p', null, 'React.createElement()');
 
