@@ -13,7 +13,6 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Hello World!</h1>
-        <small>You are running this application in <b>{process.env.NODE_ENV}</b> mode.</small>
         {createdReactElement}
         <Comp />
         <PureComp />

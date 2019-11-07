@@ -1,6 +1,7 @@
 
 const path = require("path");
 const webpack = require("webpack");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = env => {
   return {
@@ -40,6 +41,25 @@ module.exports = env => {
       publicPath: "http://localhost:3000/dist/",
       hot: true,
     },
-    plugins: [new webpack.HotModuleReplacementPlugin()]
+    plugins: [
+      new webpack.HotModuleReplacementPlugin(),
+      new HtmlWebpackPlugin({
+        inject: false,
+        template: require('html-webpack-template'),
+        appMountId: 'app',
+        bodyHtmlSnippet: '<noscript>You need to enable JavaScript to run this app.</noscript>',
+        title: 'React Mentoring',
+        minify: env.NODE_ENV === 'development'
+          ? false
+          : {
+            collapseWhitespace: true,
+            removeComments: true,
+            removeRedundantAttributes: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true,
+            useShortDoctype: true
+          }
+      })
+    ]
   }
 };
