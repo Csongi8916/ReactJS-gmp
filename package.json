@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --passWithNoTests",
-    "start": "webpack-dev-server",
-    "prod": "webpack --mode production",
-    "dev": "webpack"
+    "start": "webpack-dev-server --env.NODE_ENV=development --open",
+    "prod": "webpack --env.NODE_ENV=production",
+    "server": "webpack --env.NODE_ENV=production && node server.js"
   },
   "author": "",
   "license": "ISC",
