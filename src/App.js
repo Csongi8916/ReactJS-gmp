@@ -4,19 +4,17 @@ import PureComp from "./components/samples/pureComp";
 import FuncComp from "./components/samples/funcComp";
 
 import "./App.scss";
+import MovieSearchPage from "./containers/MovieSearchPage/MovieSearchPage";
 
-const createdReactElement = React.createElement('p', null, 'React.createElement()');
+//const createdReactElement = React.createElement('p', null, 'React.createElement()');
 
 class App extends Component {
-
   render() {
     return (
-      <div className="App">
-        <h1>Hello World!</h1>
-        {createdReactElement}
-        <Comp />
-        <PureComp />
-        <FuncComp />
+      <div className="app">
+        <div className="app__content">
+          <MovieSearchPage />
+        </div>
       </div>
     );
   }
