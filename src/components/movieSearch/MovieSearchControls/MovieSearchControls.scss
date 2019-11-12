@@ -1,0 +1,17 @@
+$nrWhiteColor: #ffffff;
+
+.MovSearchControl_SearchTitle {
+  text-transform: uppercase;
+  font-size: 38px;
+  color: $nrWhiteColor;
+}
+
+.MovSearchControl_Input {
+  background-color: #424242;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  padding: 10px 10px;
+  line-height: 28px; 
+}

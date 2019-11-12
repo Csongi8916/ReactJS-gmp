@@ -3,10 +3,16 @@ $nrBlackColor: #232323;
 $nrWhiteColor: #ffffff;
 
 .mov-search {
+  display: flex;
+  flex-direction: column;
   background-color: $nrBlackColor;
 }
 
-.mov-search__search-title {
-  text-transform: uppercase;
-  color: $nrWhiteColor;
+.mov-search__logo {
+  margin-left: 4vw;
+}
+
+.mov-search__content {
+  margin-left: 7vw;
+  margin-right: 7vw;
 }
