@@ -3,28 +3,39 @@ $nrBlackColor: #232323;
 $nrGrayColor: #424242;
 $nrWhiteColor: #ffffff;
 
-.NxrToogleBtn {
+.NxrToogle {
   display: flex;
-  text-align: center;
-  margin-left: 10px;
-  background-color: rgba( $nrGrayColor, .4 );
-  color: #fff;
-  cursor: pointer;
-  width: 200px;
-  border: 0;
-  border-radius: 3%;
-  outline: none;
-  font-family: Montserrat, Helvetica, sans-serif;
-  font-size: 16px;
-  text-transform: uppercase;
-  padding: 15px;
+  align-items: center;
 
-  .NxrToogleBtn_First {
-    min-width: 100px;
+  .NxrToogle_ModeTitle {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 20px;
+    text-transform: uppercase;
   }
 
-  .NxrToogleBtn_Second {
-    min-width: 100px;
+  .NxrToogle_Btn {
+    display: flex;
+    text-align: center;
+    margin-left: 10px;
+    background-color: rgba( $nrGrayColor, .4 );
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    border-radius: 3%;
+    outline: none;
+    font-family: Montserrat, Helvetica, sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 15px 25px;
+
+    .NxrToogleBtn_First {
+      margin-right: 10px;
+    }
+
+    .NxrToogleBtn_Second {
+      margin-left: 10px;
+    }
   }
 
 }

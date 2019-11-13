@@ -4,7 +4,6 @@ import NxrToogleButton from '../../UI/NxrToogleButton/NxrToogleButton';
 
 import classes from './MovieSearchControls.scss';
 
-
 export default function MovieSearchControls() {
   return (
     <div className="MovSearchControl">
@@ -14,8 +13,7 @@ export default function MovieSearchControls() {
         <NxrButton>Search</NxrButton>
       </div>
       <div className="MovSearchControl_SearchMode">
-        <span className="MovSearchControl_ModeTitle">Search by</span>
-        <NxrToogleButton firstTitle="title" secondTitle="gengre" />
+        <NxrToogleButton title="Search by" firstTitle="title" secondTitle="gengre" />
       </div>
     </div>
   )

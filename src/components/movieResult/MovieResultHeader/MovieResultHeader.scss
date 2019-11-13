@@ -1,0 +1,23 @@
+$nrRedColor: #f65261;
+$nrBlackColor: #232323;
+$nrGrayColor: #424242;
+$nrBgColor: #555555;
+
+
+.MovieResultHeader {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background-color: $nrBgColor;
+
+  .MovieResultHeader_LeftInfoPanel {
+    flex-grow: 1;
+    margin-left: 50px;
+  }
+
+  .MovieResultHeader_RightInfoPanel {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+  }
+}

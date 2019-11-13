@@ -8,8 +8,8 @@ $nrBlackColor: #232323;
 
 .app__content {
   min-height: 100vh;
-  margin-left: 10vh;
-  margin-right: 10vh;
+  margin: auto;
+  max-width: 1200px;
   border-left: 1px solid $nrBlackColor;
   border-right: 1px solid $nrBlackColor;
   box-shadow: 12px 0 15px -4px $nrBlackColor, -12px 0 8px -4px $nrBlackColor;
