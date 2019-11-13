@@ -2,17 +2,19 @@ $nrRedColor: #f65261;
 $nrBlackColor: #232323;
 $nrWhiteColor: #ffffff;
 
-.mov-search {
+.MovSearch {
   display: flex;
   flex-direction: column;
   background-color: $nrBlackColor;
+  padding-top: 20px;
+  padding-bottom: 60px;
 }
 
-.mov-search__logo {
+.MovSearch_Logo {
   margin-left: 4vw;
 }
 
-.mov-search__content {
+.MovSearch_Content {
   margin-left: 7vw;
   margin-right: 7vw;
 }

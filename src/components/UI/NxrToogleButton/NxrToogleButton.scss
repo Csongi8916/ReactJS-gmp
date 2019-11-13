@@ -1,0 +1,30 @@
+$nrRedColor: #f65261;
+$nrBlackColor: #232323;
+$nrGrayColor: #424242;
+$nrWhiteColor: #ffffff;
+
+.NxrToogleBtn {
+  display: flex;
+  text-align: center;
+  margin-left: 10px;
+  background-color: rgba( $nrGrayColor, .4 );
+  color: #fff;
+  cursor: pointer;
+  width: 200px;
+  border: 0;
+  border-radius: 3%;
+  outline: none;
+  font-family: Montserrat, Helvetica, sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 15px;
+
+  .NxrToogleBtn_First {
+    min-width: 100px;
+  }
+
+  .NxrToogleBtn_Second {
+    min-width: 100px;
+  }
+
+}

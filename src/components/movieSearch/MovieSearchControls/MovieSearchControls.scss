@@ -1,17 +1,35 @@
+$nrRedColor: #f65261;
+$nrBlackColor: #232323;
+$nrGrayColor: #424242;
 $nrWhiteColor: #ffffff;
 
 .MovSearchControl_SearchTitle {
+  display: flex;
   text-transform: uppercase;
   font-size: 38px;
   color: $nrWhiteColor;
 }
 
+.MovSearchControl_ModeTitle {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+
 .MovSearchControl_Input {
-  background-color: #424242;
+  background-color: $nrGrayColor;
   color: #fff;
   outline: none;
   border: none;
+  width: 60%;
   font-size: 20px;
   padding: 10px 10px;
   line-height: 28px; 
+}
+
+.MovSearchControl_SearchMode {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
 }

@@ -1,10 +1,18 @@
 $nrRedColor: #f65261;
 $nrBgColor: #555555;
+$nrBlackColor: #232323;
 
 .app {
+  background-color: $nrBgColor;
 }
 
 .app__content {
   min-height: 100vh;
+  margin-left: 10vh;
+  margin-right: 10vh;
+  border-left: 1px solid $nrBlackColor;
+  border-right: 1px solid $nrBlackColor;
+  box-shadow: 12px 0 15px -4px $nrBlackColor, -12px 0 8px -4px $nrBlackColor;
+
 }
 

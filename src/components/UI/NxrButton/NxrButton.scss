@@ -1,0 +1,18 @@
+$nrRedColor: #f65261;
+$nrBlackColor: #232323;
+$nrWhiteColor: #ffffff;
+
+.NrxBtn {
+  margin-left: 10px;
+  background-color: $nrRedColor;
+  color: #fff;
+  cursor: pointer;
+  width: 150px;
+  border: 0;
+  border-radius: 3%;
+  outline: none;
+  font-family: Montserrat, Helvetica, sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 13px 10px;
+}

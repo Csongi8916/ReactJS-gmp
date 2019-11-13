@@ -6,11 +6,11 @@ import style from './MovieSearch.scss';
 
 export default function MovieSearch() {
   return (
-    <div className="mov-search">
-      <div className="mov-search__logo">
+    <div className="MovSearch">
+      <div className="MovSearch_Logo">
         <Logo />
       </div>
-      <div className="mov-search__content">
+      <div className="MovSearch_Content">
         <MovieSearchControls />
       </div>
     </div>
