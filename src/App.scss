@@ -13,6 +13,11 @@ $nrBlackColor: #232323;
   border-left: 1px solid $nrBlackColor;
   border-right: 1px solid $nrBlackColor;
   box-shadow: 12px 0 15px -4px $nrBlackColor, -12px 0 8px -4px $nrBlackColor;
+}
 
+//Common:
+
+.Row {
+  display: flex;
 }
 

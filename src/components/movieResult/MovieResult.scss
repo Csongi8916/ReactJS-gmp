@@ -3,4 +3,11 @@ $bgColor: #424242;
 .MovieResult {
   color: #fff;
   background-color: $bgColor;
+
+  .MovieResult_MovieCardList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
+

@@ -1,0 +1,20 @@
+$infoColor: darken(#fff, 35%);
+
+.MovCard {
+  margin: 30px;
+
+  .MovCard_MovieTitle {
+    flex-grow: 1;
+  }
+
+  .MovCard_MovieInfo {
+    color: $infoColor;
+    font-size: 12px;
+  }
+
+  .MovCard_MovieInfoBorder {
+    border: 2px solid $infoColor;
+    border-radius: 5px;
+    padding: 1px 10px;
+  }
+}
