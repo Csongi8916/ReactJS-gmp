@@ -5,7 +5,9 @@ import FuncComp from "./components/samples/funcComp";
 
 import "./App.scss";
 import MovieSearch from './components/MovieSearch/MovieSearch';
+import MovieDetails from './components/MovieDetails/MovieDetails';
 import Layout from "./layouts/Layout/Layout";
+import MovieResult from './components/MovieResult/MovieResult'
 
 //const createdReactElement = React.createElement('p', null, 'React.createElement()');
 
@@ -16,6 +18,10 @@ class App extends Component {
         <div className="app__content">
           <Layout>
             <MovieSearch />
+            <MovieResult isDetailsResult={true} />
+
+            {/*<MovieDetails />
+            <MovieResult isDetailsResult={true} />*/}
           </Layout>
         </div>
       </div>

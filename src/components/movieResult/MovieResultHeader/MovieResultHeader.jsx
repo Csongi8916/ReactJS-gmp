@@ -9,9 +9,12 @@ export default function MovieResultHeader(props) {
     <div className="MovieResultHeader">
       <div className="MovieResultHeader_LeftInfoPanel">
         {props.needTotal && <span>7 movies found</span>}
+        {!props.needTotal && <span>Films by drama genre</span>}
       </div>
       <div className="MovieResultHeader_RightInfoPanel">
-        <NxrToogleButton title="Sort by" firstTitle="released date" secondTitle="raiting" />
+        {props.needSortToogle &&
+          <NxrToogleButton title="Sort by" firstTitle="released date" secondTitle="raiting" />
+        }
       </div>
     </div>
   )

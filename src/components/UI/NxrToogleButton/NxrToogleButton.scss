@@ -14,28 +14,29 @@ $nrWhiteColor: #ffffff;
     text-transform: uppercase;
   }
 
-  .NxrToogle_Btn {
+  .NxrToogle_Container {
     display: flex;
     text-align: center;
     margin-left: 10px;
-    background-color: rgba( $nrGrayColor, .4 );
-    color: #fff;
     cursor: pointer;
-    border: 0;
-    border-radius: 3%;
-    outline: none;
+    color: #fff;
     font-family: Montserrat, Helvetica, sans-serif;
     font-size: 16px;
     text-transform: uppercase;
-    padding: 15px 25px;
 
-    .NxrToogleBtn_First {
-      margin-right: 10px;
+    .NxrToogle_Btn {
+      border: 0;
+      border-radius: 3%;
+      padding: 15px 25px;
     }
 
-    .NxrToogleBtn_Second {
-      margin-left: 10px;
+    .NxrToogle_Btn-Active {
+      background-color: $nrRedColor;
     }
+
+    .NxrToogle_Btn-Inactive {
+      background-color: rgba( $nrGrayColor, .4 );
+    }
+
   }
-
 }

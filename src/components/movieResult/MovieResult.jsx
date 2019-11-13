@@ -4,10 +4,10 @@ import MovieCard from '../MovieCard/MovieCard';
 
 import classes from './MovieResult.scss';
 
-export default function MovieResult() {
+export default function MovieResult({ isDetailsResult }) {
   return (
     <div className="MovieResult" style={{ minHeight: '65vh' }}>
-      <MovieResultHeader needTotal={true} needGengre={false} needSortToogle={true} />
+      <MovieResultHeader needTotal={!isDetailsResult} needSortToogle={!isDetailsResult} />
       <div className="MovieResult_MovieCardList">
         <MovieCard />
         <MovieCard />

@@ -1,0 +1,49 @@
+$nrRedColor: #f65261;
+$nrGrenColor: #a1e66f;
+$nrBlackColor: #232323;
+$nrWhiteColor: #ffffff;
+
+.MovieDetails {
+  display: flex;
+  flex-direction: column;
+  background-color: $nrBlackColor;
+  padding-top: 20px;
+  padding-bottom: 60px;
+
+  .MovieDetails_Logo {
+    margin-left: 50px;
+  }
+
+  .MovieDetails_Container {
+    display: flex;
+    margin: 40px 50px;
+
+    .MovieDetails_Img {
+    }
+
+    .MovieDetails_Info {
+      margin-left: 40px;
+      color: #fff;
+    }
+
+    .MovieDetails_Title {
+      font-size: 38px;
+    }
+
+    .MovieDetails_Rate {
+      margin-left: 20px;
+      padding: 15px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      font-size: 25px;
+      color: $nrGrenColor;
+    }
+
+    .MovieDetails_Description {
+      margin-top: 45px;
+      text-align: justify;
+    }
+  }
+}
+
+

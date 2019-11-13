@@ -4,10 +4,9 @@ import MovieResult from '../../components/MovieResult/MovieResult'
 
 export default function Layout(props) {
   return (
-    <div>
+    <React.Fragment>
       {props.children}
-      <MovieResult></MovieResult>
       <Footer></Footer>
-    </div>
+    </React.Fragment>
   )
 }
