@@ -1,18 +1,20 @@
 import React from 'react';
 
+import { getYear, separateGenres } from '../../utils/movieUtility';
 import classes from './MovieCard.scss';
 
-import pic from '../../assets/testimg.jpg'
+//import pic from '../../assets/testimg.jpg'
 
-export default function MovieCard() {
+export default function MovieCard({ title, year, genres, image }) {
+
   return (
     <div className="MovCard">
-      <img src={pic} width="300" height="410" />
+      <img src={image} width="300" height="410" />
       <div className="Row">
-        <span className="MovCard_MovieTitle">A film</span>
-        <div className="MovCard_MovieInfo MovCard_MovieInfoBorder">2004</div>
+        <span className="MovCard_MovieTitle">{title}</span>
+        <div className="MovCard_MovieInfo MovCard_MovieInfoBorder">{getYear(year)}</div>
       </div>
-      <p className="MovCard_MovieInfo">Horror</p>
+      <p className="MovCard_MovieInfo">{separateGenres(genres)}</p>
     </div>
   )
 }

@@ -1,12 +1,13 @@
-$bgColor: #424242;
+$nrBlackColor: #232323;
 
 .MovieResult {
   color: #fff;
-  background-color: $bgColor;
+  background-color: $nrBlackColor;
 
   .MovieResult_MovieCardList {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
   }
 }

@@ -5,7 +5,7 @@ $nrWhiteColor: #ffffff;
 .MovSearch {
   display: flex;
   flex-direction: column;
-  background-color: $nrBlackColor;
+  background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('../../assets/movie_bg.jpg');
   padding-top: 20px;
   padding-bottom: 60px;
 }

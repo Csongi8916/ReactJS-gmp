@@ -2,24 +2,28 @@ $nrRedColor: #f65261;
 $nrGrenColor: #a1e66f;
 $nrBlackColor: #232323;
 $nrWhiteColor: #ffffff;
+$infoColor: darken(#fff, 35%);
 
 .MovieDetails {
   display: flex;
   flex-direction: column;
-  background-color: $nrBlackColor;
+  background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) ), url('../../assets/movie_bg.jpg');
   padding-top: 20px;
   padding-bottom: 60px;
 
-  .MovieDetails_Logo {
+  .MovieDetails_Header {
+    display: flex;
     margin-left: 50px;
+    margin-right: 50px;
+
+    .MovieDetails_Logo {
+      flex-grow: 1;
+    }
   }
 
   .MovieDetails_Container {
     display: flex;
     margin: 40px 50px;
-
-    .MovieDetails_Img {
-    }
 
     .MovieDetails_Info {
       margin-left: 40px;
@@ -30,6 +34,11 @@ $nrWhiteColor: #ffffff;
       font-size: 38px;
     }
 
+    .MovieDetails_Genre {
+      color: $infoColor;
+      font-size: 12px;
+    }
+
     .MovieDetails_Rate {
       margin-left: 20px;
       padding: 15px;
@@ -37,6 +46,21 @@ $nrWhiteColor: #ffffff;
       border-radius: 50%;
       font-size: 25px;
       color: $nrGrenColor;
+    }
+
+    .MovieDetails_Time {
+      margin-top: 45px;
+
+      .MovieDetails_DateTime {
+        font-size: 20px;
+        color: $nrRedColor;
+      }
+
+      .MovieDetails_DateTimeLabel {
+        font-size: 10px;
+        color: $infoColor;
+        margin: 0px 30px 0px 5px;
+      }
     }
 
     .MovieDetails_Description {

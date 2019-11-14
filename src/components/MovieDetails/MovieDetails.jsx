@@ -1,24 +1,33 @@
 import React from 'react';
 import Logo from '../Logo/Logo';
+import NxrSearchButton from '../UI/NxrSearchButton/NxrSearchButton';
 
+import bg from '../../assets/movie_bg.jpg';
+import { getYear, separateGenres } from '../../utils/movieUtility';
 import classes from './MovieDetails.scss';
 
-//import pic from '../../assets/testimg.jpg'
-
-export default function MovieDetails() {
+export default function MovieDetails({ title, year, genres, image, rate, runtime, overview }) {
   return (
-    <div className="MovieDetails">
-      <div className="MovieDetails_Logo">
-        <Logo />
+    <div className="MovieDetails" >
+      <div className="MovieDetails_Header">
+        <div className="MovieDetails_Logo">
+          <Logo />
+        </div>
+        <NxrSearchButton />
       </div>
       <div className="MovieDetails_Container">
-        <img src="https://image.tmdb.org/t/p/w300/ldoY4fTZkGISMidNw60GHoNdgP8.jpg" className="MovieDetails_Img" />
+        <img src={image} width="330" height="450" />
         <div className="MovieDetails_Info">
-          <span className="MovieDetails_Title">Guardians of the Galaxy Vol. 3</span>
-          <span className="MovieDetails_Rate">4.3</span>
-          <p className="MovieDetails_Description">Pulp Fiction is a 1994 American[4] crime film written and directed by Quentin Tarantino, who conceived it with Roger Avary.[5] Starring John Travolta,
-          Samuel L. Jackson, Bruce Willis, Tim Roth, Ving Rhames, and Uma Thurman, it tells several stories of criminal Los Angeles. The title refers to the pulp
-          magazines and hardboiled crime novels popular during the mid-20th century, known for their graphic violence and punchy dialogue.</p>
+          <span className="MovieDetails_Title">{title}</span>
+          <span className="MovieDetails_Rate">{rate}</span>
+          <p className="MovieDetails_Genre">{separateGenres(genres)}</p>
+          <div className="MovieDetails_Time">
+            <span className="MovieDetails_DateTime">{getYear(year)}</span>
+            <span className="MovieDetails_DateTimeLabel">year</span>
+            <span className="MovieDetails_DateTime">{runtime}</span>
+            <span className="MovieDetails_DateTimeLabel">min</span>
+          </div>
+          <p className="MovieDetails_Description">{overview}</p>
         </div>
       </div>
     </div>
