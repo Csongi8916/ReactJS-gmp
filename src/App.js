@@ -26,8 +26,7 @@ class App extends Component {
               <MovieResult isDetailsResult={false} movies={[]} />
             */}
 
-            {/*
-              <MovieDetails
+            {/* <MovieDetails
               title={movie.title}
               image={movie.poster_path}
               year={movie.release_date}
@@ -35,11 +34,9 @@ class App extends Component {
               genres={movie.genres}
               runtime={movie.runtime}
               overview={movie.overview}
-              />
-              <MovieResult isDetailsResult={true} />
-            /}
-            */}
-
+            />
+            <MovieResult isDetailsResult={true} movies={movies} />
+          */}
           </Layout>
         </div>
       </div>
