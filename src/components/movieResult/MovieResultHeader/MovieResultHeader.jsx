@@ -8,7 +8,7 @@ export default function MovieResultHeader(props) {
   return (
     <div className="MovieResultHeader">
       <div className="MovieResultHeader_LeftInfoPanel">
-        {props.needTotal && <span>7 movies found</span>}
+        {props.needTotal && <span>{props.count} movies found</span>}
         {!props.needTotal && <span>Films by drama genre</span>}
       </div>
       <div className="MovieResultHeader_RightInfoPanel">

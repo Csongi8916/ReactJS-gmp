@@ -21,9 +21,13 @@ class App extends Component {
         <div className="app__content">
           <Layout>
             <MovieSearch />
-            <MovieResult isDetailsResult={false} />
+            <MovieResult isDetailsResult={false} movies={movies} />
+            {/*
+              <MovieResult isDetailsResult={false} movies={[]} />
+            */}
 
-            {/*<MovieDetails
+            {/*
+              <MovieDetails
               title={movie.title}
               image={movie.poster_path}
               year={movie.release_date}
@@ -31,8 +35,11 @@ class App extends Component {
               genres={movie.genres}
               runtime={movie.runtime}
               overview={movie.overview}
-            />
-            <MovieResult isDetailsResult={true} />*/}
+              />
+              <MovieResult isDetailsResult={true} />
+            /}
+            */}
+
           </Layout>
         </div>
       </div>
