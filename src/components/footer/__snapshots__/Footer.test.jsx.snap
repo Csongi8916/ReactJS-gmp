@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+<div
+  className="Footer"
+>
+  <span
+    className="root"
+  >
+    <span
+      className="main-part"
+    >
+      netflix
+    </span>
+    <span>
+      rolulette
+    </span>
+  </span>
+</div>
+`;

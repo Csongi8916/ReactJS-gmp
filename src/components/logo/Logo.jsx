@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import style from './Logo.scss';
+import './Logo.scss';
 
 export default function Logo(props) {
   return (
