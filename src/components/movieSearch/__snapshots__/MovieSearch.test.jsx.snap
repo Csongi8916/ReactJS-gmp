@@ -58,18 +58,18 @@ exports[`Link changes the class when hovered 1`] = `
           <div
             className="NxrToogle_Container"
           >
-            <div
+            <button
               className="NxrToogle_Btn NxrToogle_Btn-Active"
               onClick={[Function]}
             >
               title
-            </div>
-            <div
+            </button>
+            <button
               className="NxrToogle_Btn NxrToogle_Btn-Inactive"
               onClick={[Function]}
             >
               gengre
-            </div>
+            </button>
           </div>
         </div>
       </div>

@@ -18,17 +18,25 @@ $nrWhiteColor: #ffffff;
     display: flex;
     text-align: center;
     margin-left: 10px;
-    cursor: pointer;
-    color: #fff;
-    font-family: Montserrat, Helvetica, sans-serif;
-    font-size: 16px;
-    text-transform: uppercase;
 
     .NxrToogle_Btn {
       border: 0;
+      outline: none;
       border-radius: 3%;
       padding: 15px 25px;
+      cursor: pointer;
+      color: #fff;
+      font-family: Montserrat, Helvetica, sans-serif;
+      font-size: 16px;
+      text-transform: uppercase;
     }
+
+    /*.NxrToogle_Btn_Radio {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      -o-appearance: none;
+    }*/
 
     .NxrToogle_Btn-Active {
       background-color: $nrRedColor;

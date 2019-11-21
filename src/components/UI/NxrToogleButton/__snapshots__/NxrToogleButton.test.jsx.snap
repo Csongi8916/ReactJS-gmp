@@ -12,18 +12,18 @@ exports[`NxrToogleButton do not change the class when hovered 1`] = `
   <div
     className="NxrToogle_Container"
   >
-    <div
+    <button
       className="NxrToogle_Btn NxrToogle_Btn-Active"
       onClick={[Function]}
     >
       released date
-    </div>
-    <div
+    </button>
+    <button
       className="NxrToogle_Btn NxrToogle_Btn-Inactive"
       onClick={[Function]}
     >
       raiting
-    </div>
+    </button>
   </div>
 </div>
 `;
@@ -40,18 +40,18 @@ exports[`NxrToogleButton do not change the class when hovered 2`] = `
   <div
     className="NxrToogle_Container"
   >
-    <div
+    <button
       className="NxrToogle_Btn NxrToogle_Btn-Active"
       onClick={[Function]}
     >
       released date
-    </div>
-    <div
+    </button>
+    <button
       className="NxrToogle_Btn NxrToogle_Btn-Inactive"
       onClick={[Function]}
     >
       raiting
-    </div>
+    </button>
   </div>
 </div>
 `;
