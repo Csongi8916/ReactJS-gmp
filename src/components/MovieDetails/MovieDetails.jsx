@@ -4,7 +4,7 @@ import NxrSearchButton from '../UI/NxrSearchButton/NxrSearchButton';
 
 import bg from '../../assets/movie_bg.jpg';
 import { getYear, separateGenres } from '../../utils/movieUtility';
-import classes from './MovieDetails.scss';
+import './MovieDetails.scss';
 
 export default function MovieDetails({ title, year, genres, image, rate, runtime, overview }) {
   return (

@@ -2,7 +2,7 @@ import React from 'react';
 import MovieResultHeader from './MovieResultHeader/MovieResultHeader';
 import MovieCard from '../MovieCard/MovieCard';
 
-import classes from './MovieResult.scss';
+import './MovieResult.scss';
 
 export default function MovieResult({ isDetailsResult, movies }) {
 

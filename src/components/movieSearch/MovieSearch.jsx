@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from '../Logo/Logo';
 import MovieSearchControls from './MovieSearchControls/MovieSearchControls';
 
-import style from './MovieSearch.scss';
+import './MovieSearch.scss';
 
 export default function MovieSearch() {
   return (

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import NxrButton from '../../UI/NxrButton/NxrButton';
 import NxrToogleButton from '../../UI/NxrToogleButton/NxrToogleButton';
 
-import classes from './MovieSearchControls.scss';
+import './MovieSearchControls.scss';
 
 export default function MovieSearchControls() {
   const [searchInput, setSearchInput] = useState('');

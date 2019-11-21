@@ -1,7 +1,7 @@
 import React from 'react';
 import NxrToogleButton from '../../UI/NxrToogleButton/NxrToogleButton';
 
-import classes from './MovieResultHeader.scss';
+import './MovieResultHeader.scss';
 
 
 export default function MovieResultHeader(props) {

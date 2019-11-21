@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './NxrButton.scss';
+import './NxrButton.scss';
 
 export default function NxrButton(props) {
   return (

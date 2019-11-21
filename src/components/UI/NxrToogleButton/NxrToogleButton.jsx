@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import classes from './NxrToogleButton.scss';
+import './NxrToogleButton.scss';
 
 export default function NxrToogleButton(props) {
   const [selectedOption, setSelectedOption] = useState(props.firstTitle);

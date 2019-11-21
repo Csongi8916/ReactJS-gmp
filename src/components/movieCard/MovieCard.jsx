@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { getYear, separateGenres } from '../../utils/movieUtility';
-import classes from './MovieCard.scss';
+import './MovieCard.scss';
 
 //import pic from '../../assets/testimg.jpg'
 
