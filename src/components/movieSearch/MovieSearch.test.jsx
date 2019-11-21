@@ -17,6 +17,5 @@ test('Link changes the class when hovered', () => {
   const wrap = mount(<MovieSearch />);
   const input = wrap.find('.MovSearchControl_Input');
   input.simulate('change', { target: { value: 'abc' } });
-  debugger;
   expect(true).toBe(true);
 });
