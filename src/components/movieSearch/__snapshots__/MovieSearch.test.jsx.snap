@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link changes the class when hovered 1`] = `
+<div
+  className="MovSearch"
+>
+  <div
+    className="MovSearch_Logo"
+  >
+    <span
+      className="root"
+    >
+      <span
+        className="main-part"
+      >
+        netflix
+      </span>
+      <span>
+        rolulette
+      </span>
+    </span>
+  </div>
+  <div
+    className="MovSearch_Content"
+  >
+    <div
+      className="MovSearchControl"
+    >
+      <div>
+        <p
+          className="MovSearchControl_SearchTitle"
+        >
+          Find your movie
+        </p>
+        <input
+          className="MovSearchControl_Input"
+          onChange={[Function]}
+          type="text"
+        />
+        <button
+          className="NrxBtn"
+          onClick={[Function]}
+        >
+          Search
+        </button>
+      </div>
+      <div
+        className="MovSearchControl_SearchMode"
+      >
+        <div
+          className="NxrToogle"
+        >
+          <span
+            className="NxrToogle_ModeTitle"
+          >
+            Search by
+          </span>
+          <div
+            className="NxrToogle_Container"
+          >
+            <div
+              className="NxrToogle_Btn NxrToogle_Btn-Active"
+              onClick={[Function]}
+            >
+              title
+            </div>
+            <div
+              className="NxrToogle_Btn NxrToogle_Btn-Inactive"
+              onClick={[Function]}
+            >
+              gengre
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

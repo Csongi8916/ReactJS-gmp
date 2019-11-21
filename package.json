@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --config --coverage",
+    "test:update": "jest --config --coverage --updateSnapshot",
+    "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand",
     "start": "webpack-dev-server --env.NODE_ENV=development --open",
     "prod": "webpack --env.NODE_ENV=production",
     "server": "webpack --env.NODE_ENV=production && node server.js"
@@ -16,6 +18,7 @@
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "@testing-library/react": "^9.3.2",
     "css-loader": "^1.0.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
