@@ -39,7 +39,6 @@ exports[`Link changes the class when hovered 1`] = `
         />
         <button
           className="NrxBtn"
-          onClick={[Function]}
         >
           Search
         </button>

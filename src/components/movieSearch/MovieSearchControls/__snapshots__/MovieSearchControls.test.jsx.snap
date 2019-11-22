@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieSearchControls Snapshpt tests: Should render correctly MovieCard 1`] = `
+<div
+  className="MovSearchControl"
+>
+  <div>
+    <p
+      className="MovSearchControl_SearchTitle"
+    >
+      Find your movie
+    </p>
+    <input
+      className="MovSearchControl_Input"
+      onChange={[Function]}
+      type="text"
+    />
+    <button
+      className="NrxBtn"
+    >
+      Search
+    </button>
+  </div>
+  <div
+    className="MovSearchControl_SearchMode"
+  >
+    <div
+      className="NxrToogle"
+    >
+      <span
+        className="NxrToogle_ModeTitle"
+      >
+        Search by
+      </span>
+      <div
+        className="NxrToogle_Container"
+      >
+        <button
+          className="NxrToogle_Btn NxrToogle_Btn-Active"
+          onClick={[Function]}
+        >
+          title
+        </button>
+        <button
+          className="NxrToogle_Btn NxrToogle_Btn-Inactive"
+          onClick={[Function]}
+        >
+          gengre
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

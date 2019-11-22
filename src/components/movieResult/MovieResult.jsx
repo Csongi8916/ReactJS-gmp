@@ -5,16 +5,10 @@ import MovieCard from '../MovieCard/MovieCard';
 import './MovieResult.scss';
 
 export default function MovieResult({ isDetailsResult, movies }) {
-
-  const ErrorBoundryTest = () => {
-    throw new Error('This is a TEST ERROR!');
-  }
-
   return (
     <div className="MovieResult" style={{ minHeight: '65vh' }}>
       <MovieResultHeader needTotal={!isDetailsResult} needSortToogle={!isDetailsResult} count={movies.length} />
       <div className="MovieResult_MovieCardList">
-        {/* ErrorBoundryTest() */}
         {movies && movies.length > 0 ? (
           movies.map(movie => (
             <MovieCard key={movie.id} title={movie.title} image={movie.poster_path} year={movie.release_date} genres={movie.genres} />

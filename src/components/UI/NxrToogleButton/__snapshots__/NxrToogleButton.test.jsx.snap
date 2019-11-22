@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NxrToogleButton do not change the class when hovered 1`] = `
+exports[`NxrButton Snapshpt tests: Should render correctly 1`] = `
 <div
   className="NxrToogle"
 >
   <span
     className="NxrToogle_ModeTitle"
   >
-    Sort by
+    Search by
   </span>
   <div
     className="NxrToogle_Container"
@@ -16,26 +16,26 @@ exports[`NxrToogleButton do not change the class when hovered 1`] = `
       className="NxrToogle_Btn NxrToogle_Btn-Active"
       onClick={[Function]}
     >
-      released date
+      test value 1
     </button>
     <button
       className="NxrToogle_Btn NxrToogle_Btn-Inactive"
       onClick={[Function]}
     >
-      raiting
+      test value 2
     </button>
   </div>
 </div>
 `;
 
-exports[`NxrToogleButton do not change the class when hovered 2`] = `
+exports[`NxrButton Snapshpt tests: Should render correctly 2`] = `
 <div
   className="NxrToogle"
 >
   <span
     className="NxrToogle_ModeTitle"
   >
-    Sort by
+    Search by
   </span>
   <div
     className="NxrToogle_Container"
@@ -44,13 +44,13 @@ exports[`NxrToogleButton do not change the class when hovered 2`] = `
       className="NxrToogle_Btn NxrToogle_Btn-Active"
       onClick={[Function]}
     >
-      released date
+      test value 1
     </button>
     <button
       className="NxrToogle_Btn NxrToogle_Btn-Inactive"
       onClick={[Function]}
     >
-      raiting
+      test value 2
     </button>
   </div>
 </div>

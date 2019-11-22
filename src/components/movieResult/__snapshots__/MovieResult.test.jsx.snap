@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieResult Snapshpt tests Should render correctly MovieResultHeader 1`] = `
+<div
+  className="MovieResult"
+  style={
+    Object {
+      "minHeight": "65vh",
+    }
+  }
+>
+  <div
+    className="MovieResultHeader"
+  >
+    <div
+      className="MovieResultHeader_LeftInfoPanel"
+    >
+      <span>
+        6
+         movies found
+      </span>
+    </div>
+    <div
+      className="MovieResultHeader_RightInfoPanel"
+    >
+      <div
+        className="NxrToogle"
+      >
+        <span
+          className="NxrToogle_ModeTitle"
+        >
+          Sort by
+        </span>
+        <div
+          className="NxrToogle_Container"
+        >
+          <button
+            className="NxrToogle_Btn NxrToogle_Btn-Active"
+            onClick={[Function]}
+          >
+            released date
+          </button>
+          <button
+            className="NxrToogle_Btn NxrToogle_Btn-Inactive"
+            onClick={[Function]}
+          >
+            raiting
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MovieResult_MovieCardList"
+  >
+    <div
+      className="MovCard"
+    >
+      <img
+        height="410"
+        src="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+        width="300"
+      />
+      <div
+        className="Row"
+      >
+        <span
+          className="MovCard_MovieTitle"
+        >
+          Fifty Shades Freed
+        </span>
+        <div
+          className="MovCard_MovieInfo MovCard_MovieInfoBorder"
+        >
+          2018
+        </div>
+      </div>
+      <p
+        className="MovCard_MovieInfo"
+      >
+        Drama & Romance
+      </p>
+    </div>
+    <div
+      className="MovCard"
+    >
+      <img
+        height="410"
+        src="https://image.tmdb.org/t/p/w500/sM33SANp9z6rXW8Itn7NnG1GOEs.jpg"
+        width="300"
+      />
+      <div
+        className="Row"
+      >
+        <span
+          className="MovCard_MovieTitle"
+        >
+          Zootopia
+        </span>
+        <div
+          className="MovCard_MovieInfo MovCard_MovieInfoBorder"
+        >
+          2016
+        </div>
+      </div>
+      <p
+        className="MovCard_MovieInfo"
+      >
+        Animation & Adventure & Family & Comedy
+      </p>
+    </div>
+    <div
+      className="MovCard"
+    >
+      <img
+        height="410"
+        src="https://image.tmdb.org/t/p/w500/kOVEVeg59E0wsnXmF9nrh6OmWII.jpg"
+        width="300"
+      />
+      <div
+        className="Row"
+      >
+        <span
+          className="MovCard_MovieTitle"
+        >
+          Star Wars: The Last Jedi
+        </span>
+        <div
+          className="MovCard_MovieInfo MovCard_MovieInfoBorder"
+        >
+          2017
+        </div>
+      </div>
+      <p
+        className="MovCard_MovieInfo"
+      >
+        Fantasy & Adventure & Science Fiction
+      </p>
+    </div>
+    <div
+      className="MovCard"
+    >
+      <img
+        height="410"
+        src="https://image.tmdb.org/t/p/w500/uxzzxijgPIY7slzFvMotPv8wjKA.jpg"
+        width="300"
+      />
+      <div
+        className="Row"
+      >
+        <span
+          className="MovCard_MovieTitle"
+        >
+          Black Panther
+        </span>
+        <div
+          className="MovCard_MovieInfo MovCard_MovieInfoBorder"
+        >
+          2018
+        </div>
+      </div>
+      <p
+        className="MovCard_MovieInfo"
+      >
+        Action & Adventure & Fantasy & Science Fiction
+      </p>
+    </div>
+    <div
+      className="MovCard"
+    >
+      <img
+        height="410"
+        src="https://image.tmdb.org/t/p/w500/eKi8dIrr8voobbaGzDpe8w0PVbC.jpg"
+        width="300"
+      />
+      <div
+        className="Row"
+      >
+        <span
+          className="MovCard_MovieTitle"
+        >
+          Coco
+        </span>
+        <div
+          className="MovCard_MovieInfo MovCard_MovieInfoBorder"
+        >
+          2017
+        </div>
+      </div>
+      <p
+        className="MovCard_MovieInfo"
+      >
+        Adventure & Comedy & Family & Animation
+      </p>
+    </div>
+    <div
+      className="MovCard"
+    >
+      <img
+        height="410"
+        src="https://image.tmdb.org/t/p/w500/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg"
+        width="300"
+      />
+      <div
+        className="Row"
+      >
+        <span
+          className="MovCard_MovieTitle"
+        >
+          Thor: Ragnarok
+        </span>
+        <div
+          className="MovCard_MovieInfo MovCard_MovieInfoBorder"
+        >
+          2017
+        </div>
+      </div>
+      <p
+        className="MovCard_MovieInfo"
+      >
+        Action & Adventure & Fantasy
+      </p>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NxrButton Snapshpt tests: Should render correctly NxrButton 1`] = `
+<button
+  className="NrxBtn"
+/>
+`;

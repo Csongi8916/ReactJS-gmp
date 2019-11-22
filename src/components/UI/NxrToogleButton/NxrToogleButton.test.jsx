@@ -2,23 +2,44 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { configure, shallow, mount, render } from 'enzyme';
 import NxrToogleButton from './NxrToogleButton';
+import { MySpy } from '../../../spy';
 
-test('NxrToogleButton do not change the class when hovered', () => {
-  const component = renderer.create(
-    <NxrToogleButton title="Sort by" firstTitle="released date" secondTitle="raiting" />,
-  );
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+const values = ['test value 1', 'test value 2'];
+const comp = <NxrToogleButton title="Search by" firstTitle={values[0]} secondTitle={values[1]} />
+const tree = renderer.create(comp).toJSON();
+const wrap = shallow(comp);
 
-  tree.children[1].children[0].props.onClick();
-  tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+
+describe('NxrButton Snapshpt tests:', () => {
+  test('Should render correctly', () => {
+    expect(tree).toMatchSnapshot();
+    tree.children[1].children[0].props.onClick();
+    wrap.find('.NxrToogle_Btn').at(0).simulate('click');
+    expect(wrap.getElement()).toMatchSnapshot();
+  });
 });
 
-it('works', () => {
-  const wrap = shallow(<NxrToogleButton title="test" />);
-  const button = wrap.find('.NxrToogle_Btn').at(1);
-  expect(button.hasClass('NxrToogle_Btn-Inactive')).toBe(true);
-  button.props().onClick();
-  expect(button.hasClass('NxrToogle_Btn-Active')).toBe(true);
+describe('NxrButton UI tests:', () => {
+  it('Should active style for selected toggle', () => {
+    let button = wrap.find('.NxrToogle_Btn').at(0);
+    expect(button.hasClass('NxrToogle_Btn-Active')).toBe(true);
+    expect(button.hasClass('NxrToogle_Btn-Inactive')).toBe(false);
+
+    wrap.setProps({ firstTitle: values[1], secondTitle: values[0] });
+    button = wrap.find('.NxrToogle_Btn').at(0);
+    expect(button.hasClass('NxrToogle_Btn-Active')).toBe(false);
+    expect(button.hasClass('NxrToogle_Btn-Inactive')).toBe(true);
+
+    wrap.setProps({ firstTitle: values[0], secondTitle: values[1] });
+    button = wrap.find('.NxrToogle_Btn').at(0);
+    expect(button.hasClass('NxrToogle_Btn-Active')).toBe(true);
+    expect(button.hasClass('NxrToogle_Btn-Inactive')).toBe(false);
+  });
+
+  it('should call handle toogle when button is clicked', () => {
+    wrap.find('.NxrToogle_Btn').at(1).simulate('click');
+    expect(wrap.find('.NxrToogle_Btn').at(1).hasClass('NxrToogle_Btn-Active')).toBe(true);
+  });
 });
+
+
