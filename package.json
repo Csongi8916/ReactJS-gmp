@@ -7,6 +7,7 @@
     "test": "jest --config --coverage",
     "test:update": "jest --config --coverage --updateSnapshot",
     "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand",
+    "cypress": "cypress open",
     "start": "webpack-dev-server --env.NODE_ENV=development --open",
     "prod": "webpack --env.NODE_ENV=production",
     "server": "webpack --env.NODE_ENV=production && node server.js"
@@ -20,6 +21,7 @@
     "@babel/preset-react": "^7.0.0",
     "@testing-library/react": "^9.3.2",
     "css-loader": "^1.0.0",
+    "cypress": "^3.6.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "file-loader": "^4.2.0",
