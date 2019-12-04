@@ -3,6 +3,11 @@ $nrRedColor: #f65261;
 
 .MovCard {
   margin: 30px;
+  max-width: 300px;
+
+  .Row {
+    margin-top: 10px
+  }
 
   .MovCard_MovieTitle {
     flex-grow: 1;
@@ -16,6 +21,7 @@ $nrRedColor: #f65261;
   .MovCard_MovieInfoBorder {
     border: 2px solid $infoColor;
     border-radius: 5px;
+    max-height: 15px;
     padding: 1px 10px;
   }
 }
