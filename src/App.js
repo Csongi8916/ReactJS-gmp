@@ -10,6 +10,7 @@ import MovieDetails from './components/MovieDetails/MovieDetails';
 import Layout from "./layouts/Layout/Layout";
 import MovieResult from './components/MovieResult/MovieResult';
 import { movies } from './data/dummy.js';
+import MovieResultContainer from "./containers/MovieResultContainer/MovieResultContainer";
 
 //const createdReactElement = React.createElement('p', null, 'React.createElement()');
 
@@ -22,7 +23,7 @@ const App = () => {
         <div className="app__content">
           <Layout>
             <MovieSearch />
-            <MovieResult isDetailsResult={false} />
+            <MovieResultContainer isDetailsResult={false} />
 
             {/* <MovieResult isDetailsResult={false} movies={[]} /> */}
 

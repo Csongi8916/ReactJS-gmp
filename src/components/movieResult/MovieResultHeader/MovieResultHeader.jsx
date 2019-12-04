@@ -1,5 +1,5 @@
 import React from 'react';
-import NxrToogleButton from '../../UI/NxrToogleButton/NxrToogleButton';
+import ToogleButtonContainer from '../../../containers/ToogleButtonContainer/ToogleButtonContainer';
 
 import './MovieResultHeader.scss';
 
@@ -13,7 +13,7 @@ export default function MovieResultHeader(props) {
       </div>
       <div className="MovieResultHeader_RightInfoPanel">
         {props.needSortToogle &&
-          <NxrToogleButton title="Sort by" firstTitle="released date" secondTitle="raiting" />
+          <ToogleButtonContainer title="Sort by" firstTitle="released date" secondTitle="raiting" />
         }
       </div>
     </div>

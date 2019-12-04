@@ -6,11 +6,7 @@ import * as actions from '../../store/actions/index';
 
 import './MovieResult.scss';
 
-function _MovieResult(props) {
-  useEffect(() => {
-    props.onInitMovies();
-  }, []);
-
+function MovieResult(props) {
   return (
     <div className="MovieResult" style={{ minHeight: '65vh' }}>
       <MovieResultHeader needTotal={!props.isDetailsResult} needSortToogle={!props.isDetailsResult} count={props.movies.length} />
@@ -28,21 +24,6 @@ function _MovieResult(props) {
     </div>
   )
 }
-
-const mapStateToProps = state => ({ movies: state.msr.movies });
-
-const mapDispatchToProps = dispatch => {
-  return {
-    onInitMovies: () => {
-      dispatch(actions.fetchMovies())
-    }
-  }
-}
-
-const MovieResult = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(_MovieResult);
 
 export default MovieResult;
 
