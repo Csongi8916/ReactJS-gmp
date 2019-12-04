@@ -8,7 +8,7 @@ import "./App.scss";
 import MovieSearch from './components/MovieSearch/MovieSearch';
 import MovieDetails from './components/MovieDetails/MovieDetails';
 import Layout from "./layouts/Layout/Layout";
-import MovieResult from './components/MovieResult/MovieResult'
+import MovieResult from './components/MovieResult/MovieResult';
 import { movies } from './data/dummy.js';
 
 //const createdReactElement = React.createElement('p', null, 'React.createElement()');
@@ -20,13 +20,13 @@ const App = () => {
     <ErrorBoundary>
       <div className="app">
         <div className="app__content">
-            <Layout>
-              <MovieSearch />
-              <MovieResult isDetailsResult={false} movies={movies} />
-              
-              {/* <MovieResult isDetailsResult={false} movies={[]} /> */}
+          <Layout>
+            <MovieSearch />
+            <MovieResult isDetailsResult={false} />
 
-              {/* <MovieDetails
+            {/* <MovieResult isDetailsResult={false} movies={[]} /> */}
+
+            {/* <MovieDetails
                 title={movie.title}
                 image={movie.poster_path}
                 year={movie.release_date}
@@ -37,11 +37,10 @@ const App = () => {
               />
               <MovieResult isDetailsResult={true} movies={movies} />
             */}
-            </Layout>
+          </Layout>
         </div>
       </div>
     </ErrorBoundary>
-
   );
 }
 
