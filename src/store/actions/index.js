@@ -1,5 +1,7 @@
 export {
-  searchByTitle,
-  searchByGenre,
+  search,
+  sort,
+  setSearchParam,
+  setMovies,
   fetchMovies
 } from './movieSearchAction';

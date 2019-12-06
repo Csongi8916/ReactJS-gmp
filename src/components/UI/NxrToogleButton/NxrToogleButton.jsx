@@ -3,22 +3,20 @@ import React, { useState } from 'react';
 import './NxrToogleButton.scss';
 
 export default function NxrToogleButton(props) {
-  const [selectedOption, setSelectedOption] = useState(props.firstTitle);
-
-  const handleToogle = (data) => {
-    setSelectedOption(data);
-  }
+  debugger;
 
   return (
     <div className="NxrToogle">
       <span className="NxrToogle_ModeTitle">{props.title}</span>
       <div className="NxrToogle_Container">
-        <button className={`NxrToogle_Btn ${selectedOption === props.firstTitle ? 'NxrToogle_Btn-Active' : 'NxrToogle_Btn-Inactive'}`}
-          onClick={() => handleToogle(props.firstTitle)}>
+        <button value={props.firstTitle}
+          className={`NxrToogle_Btn ${props.searchParam === props.firstTitle ? 'NxrToogle_Btn-Active' : 'NxrToogle_Btn-Inactive'}`}
+          onClick={(e) => props.click(e)}>
           {props.firstTitle}
         </button>
-        <button className={`NxrToogle_Btn ${selectedOption === props.secondTitle ? 'NxrToogle_Btn-Active' : 'NxrToogle_Btn-Inactive'}`}
-          onClick={() => handleToogle(props.secondTitle)}>
+        <button value={props.secondTitle}
+          className={`NxrToogle_Btn ${props.searchParam === props.secondTitle ? 'NxrToogle_Btn-Active' : 'NxrToogle_Btn-Inactive'}`}
+          onClick={(e) => props.click(e)}>
           {props.secondTitle}
         </button>
       </div>

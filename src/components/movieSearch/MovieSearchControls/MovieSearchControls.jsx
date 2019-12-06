@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import NxrButton from '../../UI/NxrButton/NxrButton';
 import ToogleButtonContainer from '../../../containers/ToogleButtonContainer/ToogleButtonContainer';
+import { SEARCH_BY, TITLE, GENRE } from '../../../constants';
 
 import './MovieSearchControls.scss';
 
@@ -15,7 +16,7 @@ export default function MovieSearchControls() {
         <NxrButton className="MovSearchControl_SearchBtn">Search</NxrButton>
       </div>
       <div className="MovSearchControl_SearchMode">
-        <ToogleButtonContainer title="Search by" firstTitle="title" secondTitle="gengre" />
+        <ToogleButtonContainer title={SEARCH_BY} firstTitle={TITLE} secondTitle={GENRE} />
       </div>
     </div>
   )

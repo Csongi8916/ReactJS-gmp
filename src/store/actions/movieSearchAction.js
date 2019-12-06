@@ -1,16 +1,23 @@
 import * as actionTypes from './actionTypes';
 
-export const searchByTitle = (title) => {
+export const search = (input) => {
   return {
-    type: actionTypes.SEARCH_BY_TITLE,
-    payload: title
+    type: actionTypes.SEARCH,
+    payload: input
   };
 };
 
-export const searchByGenre = (genre) => {
+export const sort = (sortParam) => {
   return {
-    type: actionTypes.SEARCH_BY_GENRE,
-    payload: genre
+    type: actionTypes.SORT,
+    payload: sortParam
+  };
+};
+
+export const setSearchParam = (searchParam) => {
+  return {
+    type: actionTypes.SET_SEARCH_PARAM,
+    payload: searchParam
   };
 };
 
@@ -23,7 +30,7 @@ export const setMovies = (movies) => {
 
 export const fetchMovies = () => {
   return dispatch => {
-    fetch('https://reactjs-cdp.herokuapp.com/movies')
+    fetch('https://reactjs-cdp.herokuapp.com/movies?limit=30"')
       .then(response => {
         return response.json()
       })

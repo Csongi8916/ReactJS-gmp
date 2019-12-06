@@ -2,19 +2,21 @@ import * as actionTypes from '../actions/actionTypes';
 import { updateObject } from '../../utils/reduxUtility';
 
 const initialState = {
-  movies: []
+  movies: [],
+  shearchParam: 'title',
 };
 
-const searchByTitle = (state, action) => {
-  console.log('filterByTitle');
-  const updatedState = {
-    movies: [...movies, 'new movie'],
-  }
-  return updateObject(state, updatedState);
+const setSearchParam = (state, action) => {
+  console.log('setSearchParam');
+  let newState = { ...state };
+  newState.shearchParam = action.payload;
+  debugger;
+
+  return newState;
 }
 
 const searchByGenre = (state, action) => {
-  console.log('filterByGenre');
+  console.log('searchByGenre');
   return state;
 }
 
@@ -28,10 +30,8 @@ const setMovies = (state, action) => {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case actionTypes.SEARCH_BY_TITLE:
-      return searchByTitle(state, action);
-    case actionTypes.SEARCH_BY_GENRE:
-      return searchByGenre(state, action);
+    case actionTypes.SET_SEARCH_PARAM:
+      return setSearchParam(state, action);
     case actionTypes.SET_MOVIES:
       return setMovies(state, action);
     default:
