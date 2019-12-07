@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../store/actions/index';
 import NxrToogleButton from '../../components/UI/NxrToogleButton/NxrToogleButton';
-import { SEARCH_BY, SORT_BY, TITLE, GENRE, RELEASED_DATE, RAITING } from '../../constants';
+import { SORT_BY, TITLE, GENRE, RELEASED_DATE, RAITING } from '../../constants';
 
 const _ToogleButtonContainer = (props) => {
   const handleToogle = (e) => {

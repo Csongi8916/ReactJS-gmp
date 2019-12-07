@@ -1,10 +1,10 @@
 import * as actionTypes from './actionTypes';
 import * as constants from '../../constants';
 
-export const search = (input) => {
+export const search = ({ movies, param }) => {
   return {
     type: actionTypes.SEARCH,
-    payload: input
+    payload: { movies, param }
   };
 };
 
@@ -29,7 +29,7 @@ export const setMovies = ({ movies }) => {
   };
 };
 
-export const getConfig = (mode, param) => {
+export const getConfig = (mode, param, input) => {
   let config = { url: 'https://reactjs-cdp.herokuapp.com/movies?limit=30', action: setMovies };
 
   if (mode === constants.SORT_BY) {
@@ -38,14 +38,18 @@ export const getConfig = (mode, param) => {
     config.action = sort;
   }
   if (mode === constants.SEARCH_BY) {
-    //url += `&searchBy=${param}`;
+    if (input) {
+      config.url += `&search=${input}&searchBy=${param}`;
+    }
+    config.action = search;
   }
 
   return config;
 }
 
-export const fetchMovies = (mode, param) => {
-  const config = getConfig(mode, param);
+export const fetchMovies = (mode, param, input) => {
+  const config = getConfig(mode, param, input);
+  debugger;
 
   return dispatch => {
     fetch(config.url)
@@ -53,7 +57,7 @@ export const fetchMovies = (mode, param) => {
         return response.json()
       })
       .then(response => {
-        dispatch(config.action({ movies: response.data, param: param }));
+        dispatch(config.action({ movies: response.data, param: param, input: input }));
       })
   }
 }

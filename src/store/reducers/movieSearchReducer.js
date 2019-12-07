@@ -8,17 +8,22 @@ const initialState = {
   sortParam: RELEASED_DATE
 };
 
-const setSearchParam = (state, action) => {
+const search = (state, action) => {
   let newState = { ...state };
-  newState.shearchParam = action.payload;
+  newState.movies = action.payload.movies
   return newState;
 }
 
 const sort = (state, action) => {
-  console.log('SORT ' + action.payload.param);
   let newState = { ...state };
   newState.movies = action.payload.movies
   newState.sortParam = action.payload.param;
+  return newState;
+}
+
+const setSearchParam = (state, action) => {
+  let newState = { ...state };
+  newState.shearchParam = action.payload;
   return newState;
 }
 
@@ -37,6 +42,8 @@ const reducer = (state = initialState, action) => {
       return setMovies(state, action);
     case actionTypes.SORT:
       return sort(state, action);
+    case actionTypes.SEARCH:
+      return search(state, action);
     default:
       return state;
   }
