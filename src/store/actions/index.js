@@ -3,5 +3,6 @@ export {
   sort,
   setSearchParam,
   setMovies,
+  getMovies,
   fetchMovies
 } from './movieSearchAction';

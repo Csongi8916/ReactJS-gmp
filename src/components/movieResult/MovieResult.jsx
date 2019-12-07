@@ -11,7 +11,6 @@ function MovieResult(props) {
     <div className="MovieResult" style={{ minHeight: '65vh' }}>
       <MovieResultHeader needTotal={!props.isDetailsResult} needSortToogle={!props.isDetailsResult} count={props.movies.length} />
       <div className="MovieResult_MovieCardList">
-        {console.log(props.movies)}
         {props.movies && props.movies.length > 0 ? (
           props.movies.map(movie => (
             <MovieCard key={movie.id} title={movie.title} image={movie.poster_path} year={movie.release_date} genres={movie.genres} />
