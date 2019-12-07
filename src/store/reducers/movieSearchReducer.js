@@ -9,29 +9,19 @@ const initialState = {
 };
 
 const search = (state, action) => {
-  let newState = { ...state };
-  newState.movies = action.payload.movies
-  return newState;
+  return { ...state, movies: action.payload.movies };
 }
 
 const sort = (state, action) => {
-  let newState = { ...state };
-  newState.movies = action.payload.movies
-  newState.sortParam = action.payload.param;
-  return newState;
+  return { ...state, movies: action.payload.movies, sortParam: action.payload.param };
 }
 
 const setSearchParam = (state, action) => {
-  let newState = { ...state };
-  newState.shearchParam = action.payload;
-  return newState;
+  return { ...state, shearchParam: action.payload };
 }
 
 const setMovies = (state, action) => {
-  let newState = { ...state };
-  newState.movies = [...action.payload];
-  return newState;
-  //return updateObject(state, action.payload);
+  return { ...state, movies: action.payload };
 }
 
 const reducer = (state = initialState, action) => {

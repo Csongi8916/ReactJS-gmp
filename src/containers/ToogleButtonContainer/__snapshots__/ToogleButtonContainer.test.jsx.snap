@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToogleButtonContainer Snapshpt tests: Should render correctly NxrToogleButton 1`] = `
+<div
+  className="NxrToogle"
+>
+  <span
+    className="NxrToogle_ModeTitle"
+  />
+  <div
+    className="NxrToogle_Container"
+  >
+    <button
+      className="NxrToogle_Btn NxrToogle_Btn-Active"
+      onClick={[Function]}
+    />
+    <button
+      className="NxrToogle_Btn NxrToogle_Btn-Active"
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;

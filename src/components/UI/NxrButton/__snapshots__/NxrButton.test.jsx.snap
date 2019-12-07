@@ -3,5 +3,6 @@
 exports[`NxrButton Snapshpt tests: Should render correctly NxrButton 1`] = `
 <button
   className="NrxBtn"
+  onClick={[Function]}
 />
 `;

@@ -18,7 +18,6 @@ describe('Cypress', () => {
       .should('have.class', 'NxrToogle_Btn-Active')
   })
 
-
   it('Should active raitibg button if I will click', () => {
     cy.get('.NxrToogle_Btn')
       .eq(3)

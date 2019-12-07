@@ -13,14 +13,16 @@ exports[`NxrButton Snapshpt tests: Should render correctly 1`] = `
     className="NxrToogle_Container"
   >
     <button
-      className="NxrToogle_Btn NxrToogle_Btn-Active"
+      className="NxrToogle_Btn NxrToogle_Btn-Inactive"
       onClick={[Function]}
+      value="test value 1"
     >
       test value 1
     </button>
     <button
       className="NxrToogle_Btn NxrToogle_Btn-Inactive"
       onClick={[Function]}
+      value="test value 2"
     >
       test value 2
     </button>
