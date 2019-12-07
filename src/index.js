@@ -4,6 +4,9 @@ import App from "./App.js";
 
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
+import { persistStore, persistReducer } from 'redux-persist';
+import { PersistGate } from 'redux-persist/integration/react'
+import storage from 'redux-persist/lib/storage' // defaults to localStorage for web
 import MovieSearchReducer from './store/reducers/movieSearchReducer';
 import { Provider } from 'react-redux';
 
@@ -14,13 +17,22 @@ const rootReducer = combineReducers({
   msr: MovieSearchReducer,
 });
 
-const store = createStore(rootReducer, composeEnhancers(
+const persistConfig = {
+  key: 'root',
+  storage,
+}
+
+const persistedReducer = persistReducer(persistConfig, rootReducer)
+const store = createStore(persistedReducer, composeEnhancers(
   applyMiddleware(thunk)
 ));
+let persistor = persistStore(store);
 
 const app = (
   <Provider store={store}>
-    <App />
+    <PersistGate loading={null} persistor={persistor}>
+      <App />
+    </PersistGate>
   </Provider>
 );
 

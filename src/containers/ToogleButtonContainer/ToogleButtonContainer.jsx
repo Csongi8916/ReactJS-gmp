@@ -39,7 +39,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => {
   return {
     onSetSearchParam: (param) => dispatch(actions.setSearchParam(param)),
-    onSort: (param) => dispatch(actions.fetchMovies(SORT_BY, param))
+    onSort: (param) => dispatch(actions.sort(param))
   }
 }
 

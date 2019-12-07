@@ -12,8 +12,20 @@ const search = (state, action) => {
   return { ...state, movies: action.payload.movies };
 }
 
-const sort = (state, action) => {
+/*const sort = (state, action) => {
   return { ...state, movies: action.payload.movies, sortParam: action.payload.param };
+}*/
+
+const sort = (state, action) => {
+  debugger;
+  const sortedMovies = [...state.movies].sort(function (a, b) {
+    if (action.payload.param === RELEASED_DATE) {
+      return new Date(b.release_date) - new Date(a.release_date);
+    } else {
+      return new Date(b.vote_average) - new Date(a.vote_average);
+    }
+  });
+  return { ...state, movies: sortedMovies, sortParam: action.payload.param };
 }
 
 const setSearchParam = (state, action) => {
