@@ -1,7 +1,10 @@
+const yearSeparator = '-';
+const genreSeparator = ' & ';
+
 export const getYear = (date) => {
-  return date.split('-')[0];
+  return date.split(yearSeparator)[0];
 }
 
 export const separateGenres = (genres) => {
-  return genres.join(' & ');
+  return genres.join(genreSeparator);
 }

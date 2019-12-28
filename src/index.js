@@ -9,6 +9,7 @@ import { PersistGate } from 'redux-persist/integration/react'
 import storage from 'redux-persist/lib/storage' // defaults to localStorage for web
 import MovieSearchReducer from './store/reducers/movieSearchReducer';
 import { Provider } from 'react-redux';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 
 const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null || compose;
@@ -31,7 +32,9 @@ let persistor = persistStore(store);
 const app = (
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </PersistGate>
   </Provider>
 );

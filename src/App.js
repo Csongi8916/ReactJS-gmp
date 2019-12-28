@@ -5,39 +5,22 @@ import FuncComp from "./components/samples/funcComp";
 import ErrorBoundary from './ErrorBoundary';
 
 import "./App.scss";
+import { Route } from 'react-router-dom';
 import MovieSearch from './components/MovieSearch/MovieSearch';
 import MovieDetails from './components/MovieDetails/MovieDetails';
 import Layout from "./layouts/Layout/Layout";
 import MovieResult from './components/MovieResult/MovieResult';
-import { movies } from './data/dummy.js';
 import MovieResultContainer from "./containers/MovieResultContainer/MovieResultContainer";
+import MovieSearchPage from "./pages/MovieSearchPage";
 
 //const createdReactElement = React.createElement('p', null, 'React.createElement()');
 
 const App = () => {
-  let movie = movies[movies.length - 1];
-
   return (
     <ErrorBoundary>
       <div className="app">
         <div className="app__content">
           <Layout>
-            <MovieSearch />
-            <MovieResultContainer isDetailsResult={false} />
-
-            {/* <MovieResult isDetailsResult={false} movies={[]} /> */}
-
-            {/* <MovieDetails
-                title={movie.title}
-                image={movie.poster_path}
-                year={movie.release_date}
-                rate={movie.vote_average}
-                genres={movie.genres}
-                runtime={movie.runtime}
-                overview={movie.overview}
-              />
-              <MovieResult isDetailsResult={true} movies={movies} />
-            */}
           </Layout>
         </div>
       </div>
