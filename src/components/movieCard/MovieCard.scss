@@ -13,6 +13,11 @@ $nrRedColor: #f65261;
     flex-grow: 1;
   }
 
+  .mov-link, .mov-link:active, .mov-link:hover {
+    color: $infoColor;
+    text-decoration: none;
+  }
+
   .MovCard_MovieInfo {
     color: $infoColor;
     font-size: 12px;

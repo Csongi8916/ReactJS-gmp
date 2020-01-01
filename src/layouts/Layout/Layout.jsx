@@ -10,7 +10,7 @@ export default function Layout(props) {
     <React.Fragment>
       {/* props.children */}
       <Route path="/" exact component={MovieSearchPage} />
-      <Route path="/movie" component={MovieDetailsPage} />
+      <Route path="/movie/:id" component={MovieDetailsPage} />
       <Footer></Footer>
     </React.Fragment>
   )
