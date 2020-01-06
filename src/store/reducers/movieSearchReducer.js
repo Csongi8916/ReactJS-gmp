@@ -1,4 +1,4 @@
-import * as actionTypes from '../actions/actionTypes';
+import * as actionTypes from '../actions/MovieSearchActions/actionTypes';
 import { updateObject } from '../../utils/reduxUtility';
 import { SEARCH_BY, TITLE, GENRE, RELEASED_DATE, RAITING } from '../../constants';
 
@@ -24,8 +24,6 @@ const sort = (state, action) => {
       return b.vote_average - a.vote_average;
     }
   });
-
-  debugger;
   return { ...state, movies: sortedMovies, sortParam: action.payload };
 }
 
@@ -34,6 +32,10 @@ const setSearchParam = (state, action) => {
 }
 
 const setMovies = (state, action) => {
+  return { ...state, movies: action.payload };
+}
+
+const getMovie = (state, action) => {
   return { ...state, movies: action.payload };
 }
 
@@ -47,6 +49,8 @@ const reducer = (state = initialState, action) => {
       return sort(state, action);
     case actionTypes.SEARCH:
       return search(state, action);
+    case actionTypes.GET_MOVIE:
+      return getMovie(state, action);
     default:
       return state;
   }

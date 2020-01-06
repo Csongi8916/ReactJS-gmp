@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../../store/actions/index';
+import * as actions from '../../store/actions/MovieSearchActions/index';
 import NxrToogleButton from '../../components/UI/NxrToogleButton/NxrToogleButton';
 import { SORT_BY, TITLE, GENRE, RELEASED_DATE, RAITING } from '../../constants';
 

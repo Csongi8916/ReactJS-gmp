@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import MovieResultHeader from './MovieResultHeader/MovieResultHeader';
 import MovieCard from '../MovieCard/MovieCard';
 import { connect } from 'react-redux';
-import * as actions from '../../store/actions/index';
+import * as actions from '../../store/actions/MovieSearchActions/index';
 
 import './MovieResult.scss';
 

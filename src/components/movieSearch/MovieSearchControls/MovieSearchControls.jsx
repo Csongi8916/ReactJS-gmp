@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import NxrButton from '../../UI/NxrButton/NxrButton';
 import ToogleButtonContainer from '../../../containers/ToogleButtonContainer/ToogleButtonContainer';
-import * as actions from '../../../store/actions/index';
+import * as actions from '../../../store/actions/MovieSearchActions/index';
 import * as constants from '../../../constants';
 
 import './MovieSearchControls.scss';

@@ -1,12 +1,9 @@
 import React from 'react';
 import MovieDetails from '../components/MovieDetails/MovieDetails';
 import MovieResult from "../components/movieResult/MovieResult";
-import { movies } from '../data/dummy.js';
 
 
-function MovieDetailsPage(props) {
-  let movie = movies[movies.length - 1];
-
+function MovieDetailsPage({ movie, similarMovies }) {
   return (
     <React.Fragment>
       <MovieDetails
@@ -18,7 +15,7 @@ function MovieDetailsPage(props) {
         runtime={movie.runtime}
         overview={movie.overview}
       />
-      <MovieResult isDetailsResult={true} movies={movies} />
+      <MovieResult isDetailsResult={true} movies={similarMovies} />
 
     </React.Fragment>
   )
