@@ -6,10 +6,13 @@ import './MovieCard.scss';
 //import pic from '../../assets/testimg.jpg'
 
 export default function MovieCard({ id, title, year, genres, image }) {
-
   return (
     <div className="MovCard">
-      <Link to={`/movie/${title}`} className="mov-link">
+      <Link to={{
+        pathname: `/movie/${title}`,
+        state: { id: id }
+      }}
+        className="mov-link">
         <img src={image} width="300" height="410" />
         <div className="Row">
           <span className="MovCard_MovieTitle">{title}</span>

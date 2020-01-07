@@ -41,6 +41,7 @@ $infoColor: darken(#fff, 35%);
 
     .MovieDetails_Rate {
       margin-left: 20px;
+      //margin-bottom: 100px; todo: not work: span is inline
       padding: 15px;
       border: 2px solid #fff;
       border-radius: 50%;

@@ -13,7 +13,7 @@ function MovieResult(props) {
       <div className="MovieResult_MovieCardList">
         {props.movies && props.movies.length > 0 ? (
           props.movies.map(movie => (
-            <MovieCard key={movie.id} title={movie.title} image={movie.poster_path} year={movie.release_date} genres={movie.genres} />
+            <MovieCard key={movie.id} id={movie.id} title={movie.title} image={movie.poster_path} year={movie.release_date} genres={movie.genres} />
           ))
         ) : (
             <p style={{ fontSize: '38px' }}>No films found</p>

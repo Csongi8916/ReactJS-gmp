@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import * as actions from '../../store/actions/MovieSearchActions/index';
 
 function _MovieResultContainer(props) {
-  useEffect(() => {
+  /*useEffect(() => {
     props.onInitMovies();
-  }, []);
+  }, []);*/
 
   return (
     <MovieResult movies={props.movies} isDetailsResult={false} />

@@ -5,10 +5,9 @@ import MovieDetailsPage from '../../pages/MovieDetailsPage';
 import { movies } from '../../data/dummy.js';
 
 function _MovieDetailsContainer(props) {
-  let url = props.location.search;
-  console.log(url);
   useEffect(() => {
-    props.getMovie();
+    const id = props.location.state.id;
+    props.getMovie(id);
   }, []);
 
   return (
@@ -22,7 +21,7 @@ const mapStateToProps = state => ({ movie: state.mdr.movie });
 
 const mapDispatchToProps = dispatch => {
   return {
-    getMovie: () => dispatch(actions.fetchMovie(337167))
+    getMovie: (id) => dispatch(actions.fetchMovie(id))
   }
 }
 

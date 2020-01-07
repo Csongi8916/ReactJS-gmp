@@ -2,9 +2,15 @@ const yearSeparator = '-';
 const genreSeparator = ' & ';
 
 export const getYear = (date) => {
-  return date.split(yearSeparator)[0];
+  if (date) {
+    return date.split(yearSeparator)[0];
+  }
+  return date;
 }
 
 export const separateGenres = (genres) => {
-  return genres.join(genreSeparator);
+  if (genres && genres.length > 0) {
+    return genres.join(genreSeparator);
+  }
+  return genres;
 }

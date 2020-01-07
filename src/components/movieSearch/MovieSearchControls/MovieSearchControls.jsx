@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import { withRouter, Link } from 'react-router-dom';
 
 import NxrButton from '../../UI/NxrButton/NxrButton';
 import ToogleButtonContainer from '../../../containers/ToogleButtonContainer/ToogleButtonContainer';
@@ -16,12 +17,16 @@ function _MovieSearchControls(props) {
       <div>
         <p className="MovSearchControl_SearchTitle">Find your movie</p>
         <input className="MovSearchControl_Input" type="text" onChange={(e) => setSearchInput(e.target.value)} />
-        <NxrButton click={() => props.onSearch(props.shearchParam, searchInput)} className="MovSearchControl_SearchBtn">Search</NxrButton>
-      </div>
+        <Link to={{
+          pathname: `search/Search`,
+        }}>
+          <NxrButton click={() => props.onSearch(props.location, props.shearchParam, searchInput)} className="MovSearchControl_SearchBtn">Search</NxrButton>
+        </Link>
+      </div >
       <div className="MovSearchControl_SearchMode">
         <ToogleButtonContainer title={constants.SEARCH_BY} firstTitle={constants.TITLE} secondTitle={constants.GENRE} />
       </div>
-    </div>
+    </div >
   )
 }
 
@@ -31,7 +36,9 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => {
   return {
-    onSearch: (shearchParam, input) => dispatch(actions.fetchMovies(constants.SEARCH_BY, shearchParam, input))
+    onSearch: (location, shearchParam, input) => {
+      dispatch(actions.fetchMovies(constants.SEARCH_BY, shearchParam, input));
+    }
   }
 }
 
@@ -40,5 +47,5 @@ const MovieSearchControls = connect(
   mapDispatchToProps
 )(_MovieSearchControls);
 
-export default MovieSearchControls;
+export default withRouter(MovieSearchControls);
 
