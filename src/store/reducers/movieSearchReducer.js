@@ -10,7 +10,7 @@ const initialState = {
 };
 
 const search = (state, action) => {
-  return { ...state, movies: action.payload.movies, shearchInput: action.payload.input };
+  return { ...state, movies: action.payload.movies, searchInput: action.payload.input };
 }
 
 /*const sort = (state, action) => {
