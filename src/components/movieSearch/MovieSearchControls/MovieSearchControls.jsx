@@ -18,20 +18,22 @@ function _MovieSearchControls(props) {
         <p className="MovSearchControl_SearchTitle">Find your movie</p>
         <input className="MovSearchControl_Input" type="text" onChange={(e) => setSearchInput(e.target.value)} />
         <Link to={{
-          pathname: `search/Search`,
+          pathname: `search`,
+          search: `param=${searchInput}`
         }}>
           <NxrButton click={() => props.onSearch(props.location, props.shearchParam, searchInput)} className="MovSearchControl_SearchBtn">Search</NxrButton>
         </Link>
-      </div >
+      </div>
       <div className="MovSearchControl_SearchMode">
         <ToogleButtonContainer title={constants.SEARCH_BY} firstTitle={constants.TITLE} secondTitle={constants.GENRE} />
       </div>
-    </div >
+    </div>
   )
 }
 
 const mapStateToProps = state => ({
-  shearchParam: state.msr.shearchParam
+  shearchParam: state.msr.shearchParam,
+  searchInput: state.msr.searchInput
 });
 
 const mapDispatchToProps = dispatch => {

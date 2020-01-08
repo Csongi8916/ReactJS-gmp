@@ -6,14 +6,16 @@ import MovieSearchPage from "../../pages/MovieSearchPage";
 import MovieDetailsPage from '../../pages/MovieDetailsPage';
 import MovieDetailsContainer from '../../containers/MovieDetailsContainer/MovieDetailsContainer';
 import MovieResultContainer from '../../containers/MovieResultContainer/MovieResultContainer';
+import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
 
 export default function Layout(props) {
   return (
     <React.Fragment>
       <Switch>
         <Route path="/" exact component={MovieSearchPage} />
-        <Route path="/search/Search" component={MovieSearchPage} />
+        <Route path="/search/" component={MovieSearchPage} />
         <Route path="/movie/:id" component={MovieDetailsContainer} />
+        <Route component={NotFoundPage} />
       </Switch>
       <Footer></Footer>
     </React.Fragment>

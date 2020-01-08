@@ -1,10 +1,10 @@
 import * as actionTypes from './actionTypes';
 import * as constants from '../../../constants';
 
-export const search = ({ movies, param }) => {
+export const search = ({ movies, param, input }) => {
   return {
     type: actionTypes.SEARCH,
-    payload: { movies, param }
+    payload: { movies, param, input }
   };
 };
 
@@ -38,7 +38,6 @@ export const setMovies = ({ movies }) => {
 
 export const getConfig = (mode, param, input) => {
   let config = { url: 'https://reactjs-cdp.herokuapp.com/movies?limit=30', action: setMovies };
-
   /*if (mode === constants.SORT_BY) {
     let sortParam = param === constants.RAITING ? 'vote_average' : 'release_date';
     config.url += `&sortBy=${sortParam}&sortOrder=desc`;

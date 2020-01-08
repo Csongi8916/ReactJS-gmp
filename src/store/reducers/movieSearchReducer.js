@@ -5,11 +5,12 @@ import { SEARCH_BY, TITLE, GENRE, RELEASED_DATE, RAITING } from '../../constants
 const initialState = {
   movies: [],
   shearchParam: 'title',
+  searchInput: '',
   sortParam: RELEASED_DATE
 };
 
 const search = (state, action) => {
-  return { ...state, movies: action.payload.movies };
+  return { ...state, movies: action.payload.movies, shearchInput: action.payload.input };
 }
 
 /*const sort = (state, action) => {
