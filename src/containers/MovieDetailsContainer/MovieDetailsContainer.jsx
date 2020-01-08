@@ -5,10 +5,11 @@ import MovieDetailsPage from '../../pages/MovieDetailsPage';
 import { movies } from '../../data/dummy.js';
 
 function _MovieDetailsContainer(props) {
+
   useEffect(() => {
     const id = props.location.state.id;
     props.getMovie(id);
-  }, []);
+  }, [props.location.state.id]);
 
   return (
     <React.Fragment>

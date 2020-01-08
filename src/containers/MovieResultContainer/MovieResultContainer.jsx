@@ -9,7 +9,7 @@ function _MovieResultContainer(props) {
   }, []);*/
 
   return (
-    <MovieResult movies={props.movies} isDetailsResult={false} />
+    <MovieResult movies={props.movies} isDetailsResult={props.isDetailsResult} />
   )
 }
 

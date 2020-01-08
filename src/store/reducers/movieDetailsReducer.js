@@ -20,7 +20,6 @@ const reducer = (state = initialState, action) => {
     case actionTypes.GET_SIMILAR_MOVIES:
       return getSimilarMovies(state, action);
     case actionTypes.GET_MOVIE:
-      console.log(action.payload);
       return getMovie(state, action);
     default:
       return state;

@@ -1,6 +1,7 @@
 import React from 'react';
 import MovieDetails from '../components/MovieDetails/MovieDetails';
 import MovieResult from "../components/movieResult/MovieResult";
+import MovieResultContainer from '../containers/MovieResultContainer/MovieResultContainer';
 
 
 function MovieDetailsPage({ movie, similarMovies }) {
@@ -15,7 +16,8 @@ function MovieDetailsPage({ movie, similarMovies }) {
         runtime={movie.runtime}
         overview={movie.overview}
       />
-      <MovieResult isDetailsResult={true} movies={similarMovies} />
+      {/*<MovieResult isDetailsResult={true} movies={similarMovies} />*/}
+      <MovieResultContainer isDetailsResult={true} />
 
     </React.Fragment>
   )
