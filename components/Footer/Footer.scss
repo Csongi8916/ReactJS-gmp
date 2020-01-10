@@ -1,0 +1,9 @@
+$nrBgColor: #555555;
+
+.Footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  background-color: $nrBgColor;
+}
