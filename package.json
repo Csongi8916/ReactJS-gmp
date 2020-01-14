@@ -10,7 +10,8 @@
     "cypress": "cypress open",
     "start": "webpack-dev-server --env.NODE_ENV=development --open",
     "prod": "webpack --env.NODE_ENV=production",
-    "server": "webpack --env.NODE_ENV=production && node server.js"
+    "server": "webpack --env.NODE_ENV=development && node server.js",
+    "serve": "webpack-dev-server --env.NODE_ENV=development && node server.js"
   },
   "author": "",
   "license": "ISC",

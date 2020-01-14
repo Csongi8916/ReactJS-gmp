@@ -3,7 +3,7 @@ const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = env => {
+const browserConfig = env => {
   return {
     entry: "./src/index.js",
     mode: env.NODE_ENV,
@@ -72,3 +72,76 @@ module.exports = env => {
     ]
   }
 };
+
+const serverConfig = env => {
+  return {
+    entry: "./src/server/index.js",
+    target: "node",
+    output: {
+      path: __dirname,
+      filename: "server.js",
+      libraryTarget: "commonjs2"
+    },
+    mode: env.NODE_ENV,
+    module: {
+      rules: [
+        {
+          test: /\.(js|jsx)$/,
+          exclude: /(node_modules|bower_components)/,
+          loader: "babel-loader",
+          options: { presets: ["@babel/preset-env"] }
+        },
+        {
+          test: /\.(png|svg|jpg|gif)$/,
+          use: ["file-loader"]
+        },
+        {
+          test: /\.s[ac]ss$/i,
+          use: [
+            "css-loader",
+            {
+              loader: "sass-loader"
+            }
+          ]
+        },
+        {
+          test: /\.css$/,
+          use: ["css-loader"]
+        }
+      ]
+    },
+    resolve: { extensions: ["*", ".js", ".jsx"] },
+    devServer: {
+      contentBase: path.join(__dirname, "public/"),
+      port: 3000,
+      hot: true,
+      historyApiFallback: true
+    },
+    plugins: [
+      /*new webpack.DefinePlugin({
+        'process.env.NODE_ENV': env.NODE_ENV ? '"development"' : '"production"',
+        'process.env.BROWSER': JSON.stringify(true),
+        __DEV__: env.NODE_ENVHtmlWebPackPlugin
+      }),*/
+      new webpack.HotModuleReplacementPlugin(),
+      new HtmlWebpackPlugin({
+        inject: false,
+        template: require('html-webpack-template'),
+        appMountId: 'app',
+        bodyHtmlSnippet: '<noscript>You need to enable JavaScript to run this app.</noscript>',
+        title: 'React Mentoring',
+        minify: env.NODE_ENV === 'development'
+          ? false
+          : {
+            collapseWhitespace: true,
+            removeComments: true,
+            removeRedundantAttributes: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true,
+            useShortDoctype: true
+          }
+      })
+    ]
+  };
+};
+module.exports = [browserConfig, serverConfig];
