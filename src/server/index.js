@@ -10,14 +10,13 @@ import thunk from "redux-thunk";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 import MovieSearchPage from "../pages/MovieSearchPage";
 import MovieDetailsContainer from '../containers/MovieDetailsContainer/MovieDetailsContainer';
-// import ResultsBody from "../components/ResultsBody/ResultsBody.js";
 import { renderToString } from "react-dom/server";
 import { createMemoryHistory } from 'history';
 
 
 // const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const composeEnhancers = compose;
-const history = createMemoryHistory();
+// const history = createMemoryHistory();
 
 const rootReducer = combineReducers({
   msr: MovieSearchReducer,
@@ -27,7 +26,7 @@ const rootReducer = combineReducers({
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
 
 const routing = renderToString(
-  <Provider store={store} history={history} >
+  <Provider store={store}>
     <Router>
       <App />
       <Switch>
@@ -41,11 +40,12 @@ const routing = renderToString(
 );
 
 const app = express();
-//app.use(express.static("public"));
 const preloadedState = store.getState();
-console.log(routing);
-console.log(preloadedState.msr);
 
+// console.log(routing);
+// console.log(preloadedState.msr);
+const example = JSON.stringify(routing, preloadedState);
+console.log(example);
 
 app.get("*", (req, res) => {
   res.send(`
@@ -58,7 +58,7 @@ app.get("*", (req, res) => {
         <title>Document</title>
     </head>
     <body>
-        <div id="root">${(routing, preloadedState.msr)}</div>
+        <div id="root">${example}</div>
     </body>
     </html>`);
 });

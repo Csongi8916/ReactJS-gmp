@@ -98,6 +98,7 @@ const serverConfig = env => {
         {
           test: /\.s[ac]ss$/i,
           use: [
+            { loader: 'style-loader', options: { injectType: 'lazyStyleTag' } },
             "css-loader",
             {
               loader: "sass-loader"
@@ -106,7 +107,7 @@ const serverConfig = env => {
         },
         {
           test: /\.css$/,
-          use: ["css-loader"]
+          use: ["css-loader", "style-loader"]
         }
       ]
     },
@@ -136,8 +137,6 @@ const serverConfig = env => {
             collapseWhitespace: true,
             removeComments: true,
             removeRedundantAttributes: true,
-            removeScriptTypeAttributes: true,
-            removeStyleLinkTypeAttributes: true,
             useShortDoctype: true
           }
       })
